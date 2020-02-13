@@ -8,10 +8,10 @@
     "npm": "6.13.6"
   },
   "scripts": {
-    "server": "nodemon .",
-    "start": "node .",
+    "server": "node ./index.js",
+    "start": "node ./index.js",
     "client": "npm run start --prefix client",
-    "dev" : "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently  \"npm run client\" \"npm run server\""
   },
   "keywords": [],
   "author": "",
