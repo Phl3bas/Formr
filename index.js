@@ -2,14 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
-const keys = require('./src/config/environment');
+const keys = require('./config/environment');
 
 //routes
-const googleAuthRoute = require('./src/routes/auth.google.routes');
-const userRoute = require('./src/routes/user.routes');
+const googleAuthRoute = require('./routes/auth.google.routes');
+const userRoute = require('./routes/user.routes');
 
-require('./src/models/User.model');
-require('./src/services/passport');
+require('./models/User.model');
+require('./services/passport');
 
 mongoose.connect(keys.MongoURI, {
   useNewUrlParser: true,
