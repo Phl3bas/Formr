@@ -36,11 +36,6 @@ app.use(passport.session());
 app.use('/auth/google', googleAuthRoute);
 app.use('/api/user', userRoute);
 
-app.get('/', (req, res) => {
-  console.log(res.statusCode);
-  res.send('hello world');
-});
-
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Listening at Port: ${PORT} at http://localhost:${PORT}`);
