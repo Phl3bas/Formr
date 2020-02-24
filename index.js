@@ -17,9 +17,10 @@ mongoose.connect(keys.MongoURI, {
   useUnifiedTopology: true,
 });
 
-mongoose.connection.once('open', () => {
-  console.log('MongoDB database connection established successfully');
-});
+const db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', () => console.log('mongo db connected'));
 
 const app = express();
 
